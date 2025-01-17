@@ -1,0 +1,86 @@
+backend:
+  name: github # Or github, gitlab, bitbucket
+  branch: main # Branch to commit changes to
+  repo: Chious/frontend-docs # Your GitHub repository
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    upload: 'Upload “{{path}}”'
+    clean: 'Clean “{{path}}”'
+
+media_folder: static/img # Folder for uploaded images
+public_folder: /img # Public path for images
+
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+  sanitize_replacement: '-'
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: blog
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Author, name: authors, widget: list }
+      - { label: Tags, name: tags, widget: list }
+      - { label: Description, name: description, widget: text }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: docs
+    label: Docusaurus 教學
+    folder: docs/tutorial-basics
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Sidebar Position, name: sidebar_position, widget: string }
+      - { label: ID, name: id, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: notes
+    label: 筆記
+    folder: docs/notes
+    create: true
+    nested:
+      depth: 4
+    summary: '{{title}}'
+    path: '{{slug}}/index'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Sidebar Position, name: sidebar_position, widget: string }
+      - { label: ID, name: id, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Body, name: body, widget: markdown }
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+  - name: development
+    label: 開發文件
+    folder: docs/development
+    create: true
+    nested:
+      depth: 4
+    summary: '{{title}}'
+    path: '{{slug}}/index'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Sidebar Position, name: sidebar_position, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Body, name: body, widget: markdown }
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    slug: '{{title}}'
+
+  - name: pages
+    label: Pages
+    folder: src/pages
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Body, name: body, widget: markdown }
+
+local_backend: true
+display_url: localhost:3000
+site_url: localhost:3000
