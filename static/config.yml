@@ -1,7 +1,7 @@
 backend:
   name: github # Or github, gitlab, bitbucket
   branch: main # Branch to commit changes to
-  repo: Chious/frontend-docs # Your GitHub repository
+  repo: Chious/frontend-note # Your GitHub repository
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
@@ -82,5 +82,5 @@ collections:
       - { label: Body, name: body, widget: markdown }
 
 local_backend: true
-display_url: localhost:3000
-site_url: localhost:3000
+display_url: https://sam-dev.blog/
+site_url: https://sam-dev.blog/
