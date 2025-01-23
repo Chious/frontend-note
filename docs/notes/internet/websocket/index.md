@@ -1,7 +1,8 @@
 ---
 title: Websocket & Heartbeat 實作
-slug: websocket
 tags: [Internet, Websocket]
+sidebar_label: Websocket & Heartbeat 實作
+sidebar_position: 1
 ---
 
 在前幾個月的專案，需要用 WebSocket 來廣播共同訊息，但是因為網路不好，導致有時候會斷線，然後就會看到很多人都在『F5』刷新訊息。或是因為太久沒有操作，導致斷線。後來也在思考如何做會比較好，因此有了這篇筆記。
