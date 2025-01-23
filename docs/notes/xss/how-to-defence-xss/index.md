@@ -1,9 +1,13 @@
 ---
-title: XSS 讀書會2：阻擋XSS攻擊的三道防線——清除、過濾、風險分離
+title: 【XSS】XSS 讀書會2：阻擋XSS攻擊的三道防線——清除、過濾、風險分離
 tags: ['XSS', 'Web Security']
-sidebar_label: 阻擋XSS攻擊的三道防線
-sidebar_position: 1
+sidebar_label: 【XSS】阻擋XSS攻擊的三道防線
+sidebar_position: 0
 ---
+
+:::note
+這邊是《Beyond XSS：探索網頁前端資安宇宙》序章讀書會筆記。
+:::
 
 ## 前言：為什麼要做 XSS 防禦？
 
