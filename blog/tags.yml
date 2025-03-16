@@ -17,3 +17,18 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+prd:
+  label: PRD
+  permalink: /prd
+  description: PRD tag description
+
+Android:
+  label: Android
+  permalink: /android
+  description: Android tag description
+
+Kotlin:
+  label: Kotlin
+  permalink: /kotlin
+  description: Kotlin tag description

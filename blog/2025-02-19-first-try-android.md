@@ -1,7 +1,7 @@
 ---
 slug: first-try-android
 title: Android 採坑紀錄
-tags: [Android, Kotlin, Jetpack Compose]
+tags: [Android, Kotlin]
 ---
 
 ## 動機
