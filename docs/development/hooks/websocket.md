@@ -143,9 +143,9 @@ export default function Home() {
 ## 如何使用 Postman 測試 WebSocket
 
 1. 開啟 Postman，並選擇 WebSocket 的連線方式。
-   ![](/img/notes/Postman-Websocket.png)
+   ![](/img/notes/Postman-WebSocket.png)
 2. 在網址欄中輸入 WebSocket 的 URL，例如 `ws://localhost:8080`，然後點擊「Connect」按鈕。
-   ![](/img/notes/Postman-Websocket-2.png)
+   ![](/img/notes/Postman-WebSocket-2.png)
 3. 在連線成功後，可以在 Postman 的右側面板中看到 WebSocket 的訊息。
 4. 點擊「Send」按鈕，然後在輸入框中輸入要發送的訊息，例如 `{"type": "ping", "data": {"time": 123456789}}`，然後點擊「Send」按鈕。
 
