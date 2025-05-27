@@ -6,27 +6,34 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #D9934C; /* Orange accent color */
+  --ifm-color-primary-dark: #c48340;
+  --ifm-color-primary-darker: #b0773a;
+  --ifm-color-primary-darkest: #a06a34;
+  --ifm-color-primary-light: #e29e5c;
+  --ifm-color-primary-lighter: #e6a86c;
+  --ifm-color-primary-lightest: #ebb587;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-heading-color: #9c6c39; /* Warmer heading color */
+  --docusaurus-highlighted-code-line-bg: rgba(217, 147, 76, 0.1);
+  --ifm-font-family-base: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ifm-navbar-background-color: #f9f3ec; /* Light parchment-like color */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #ffb366; /* Brighter orange for dark mode */
+  --ifm-color-primary-dark: #ffa64d;
+  --ifm-color-primary-darker: #ff9933;
+  --ifm-color-primary-darkest: #ff8c1a;
+  --ifm-color-primary-light: #ffc080;
+  --ifm-color-primary-lighter: #ffcc99;
+  --ifm-color-primary-lightest: #ffd9b3;
+  --ifm-background-color: #2e3440; /* Nord dark background */
+  --ifm-background-surface-color: #3b4252; /* Nord darker surface */
+  --ifm-navbar-background-color: #3b4252; /* Nord darker surface */
+  --ifm-heading-color: #e5c07b; /* Gold-like heading color */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 179, 102, 0.2);
 }
 
 [data-theme='light'] .DocSearch {
@@ -67,4 +74,65 @@
     var(--ifm-color-emphasis-200) 0%,
     var(--ifm-color-emphasis-100) 100%
   );
+}
+
+/* Additional RPG theme customizations */
+.navbar {
+  box-shadow: 0 2px 5px rgba(217, 147, 76, 0.2);
+}
+
+.footer {
+  background: linear-gradient(180deg, #f9f3ec 0%, #f0e5d7 100%);
+  border-top: 1px solid var(--ifm-color-primary-light);
+  color: #7c5e40;
+  padding-top: 3rem;
+}
+
+.footer__link-item {
+  color: #9c6c39;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.footer__title {
+  color: var(--ifm-color-primary-dark);
+  font-weight: bold;
+}
+
+[data-theme='dark'] .footer {
+  background: linear-gradient(180deg, #2e3440 0%, #232935 100%);
+  border-top: 1px solid #4c566a;
+  color: #e5e9f0;
+}
+
+[data-theme='dark'] .footer__link-item {
+  color: #d8dee9;
+}
+
+[data-theme='dark'] .footer__title {
+  color: var(--ifm-color-primary-light);
+}
+
+/* Styling for buttons to look more RPG-like */
+.button {
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(217, 147, 76, 0.3);
+}
+
+/* Make code blocks look like scrolls */
+pre {
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-primary-lighter);
+}
+
+[data-theme='dark'] pre {
+  border-color: var(--ifm-color-primary-darker);
 }

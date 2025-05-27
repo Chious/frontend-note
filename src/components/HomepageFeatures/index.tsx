@@ -5,52 +5,52 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  icon: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '📜 Spell Tomes & Scrolls',
+    icon: '🧙‍♂️',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        A collection of <strong>arcane knowledge</strong> about frontend magic, organized into scrolls and tomes. 
+        Journey through tutorials, code solutions, and practical wisdom from battles with the toughest bugs.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '⚔️ Battle-Tested Code',
+    icon: '🛡️',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Discover <strong>powerful techniques</strong> refined through countless coding adventures. 
+        From React component composition to TypeScript incantations, all documented for your quest.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '🔮 Always Evolving',
+    icon: '✨',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        This grimoire is <strong>constantly updated</strong> with new discoveries and learnings. 
+        As I level up and gain experience, so too does this collection of frontend wisdom.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, icon, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <div className="text--center" style={{ fontSize: '3rem', marginBottom: '1rem' }}>
+        {icon}
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        <Heading as="h3" style={{ color: '#D9934C' }}>{title}</Heading>
+        <p style={{ color: 'var(--ifm-font-color-base)' }}>{description}</p>
       </div>
     </div>
   );
@@ -58,8 +58,15 @@ function Feature({title, Svg, description}: FeatureItem) {
 
 export default function HomepageFeatures(): ReactNode {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} style={{ 
+      background: 'var(--ifm-background-color)',
+      padding: '3rem 0',
+      borderTop: '1px solid rgba(217, 147, 76, 0.3)'
+    }}>
       <div className="container">
+        <Heading as="h2" className="text--center" style={{ color: '#D9934C', marginBottom: '2rem' }}>
+          📖 The Frontend Chronicles
+        </Heading>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
