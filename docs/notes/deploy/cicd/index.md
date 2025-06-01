@@ -36,14 +36,14 @@ id: '2'
 
 ## 目錄
 
-- [什麼是 CI/CD](#什麼是-CI/CD)
-- [Docker 與環境建置](#1、Docker-與環境建置)
-  - [VM vs Docker](#1-1-VM-vs-Docker)
-  - [Dockerfile & Docker Compose](#1-2-Dockerfile-&-Docker-Compose)
-- [Gitlab Runner & Ubuntu Setup](#2-1-Gitlab-Runner)
+- [什麼是 CI/CD](#什麼是-cicd)
+- [Docker 與環境建置](#1docker-與環境建置)
+  - [VM vs Docker](#1-1-vm-vs-docker)
+  - [Dockerfile & Docker Compose](#1-2-dockerfile--docker-compose)
+- [Gitlab Runner & Ubuntu Setup](#2-1-gitlab-runner)
   - [安裝所需的套件](#2-2-1-安裝所需的套件)
-  - [設定 Gitlab Runner](#2-2-2-設定-Gitlab-Runner)
-  - [設定 `.gitlab-ci.yml`](#2-2-3-設定-.gitlab-ci.yml)
+  - [設定 Gitlab Runner](#2-2-2-設定-gitlab-runner)
+  - [設定 `.gitlab-ci.yml`](#2-2-3-設定-gitlab-ciyml)
 - [結語](#結語)
 
 ## 什麼是 CI/CD
